@@ -18,7 +18,6 @@ def basicLoopFib(n):
 def solve(n):
     return basicLoopFib(n) % 10;
 
-# print(solve(327305));
 fo.write(f"{solve(x)}")
 
 fo.close();
