@@ -8,9 +8,9 @@ def fibonacci(n):
     a = 0
     b = 1
     if n < 0:
-        print("Incorrect input")
+        return;
     elif n == 0:
-        return a
+        return a;
     elif n == 1:
         return b
     else:
@@ -21,4 +21,5 @@ def fibonacci(n):
         return b;
     
 fo.write(f"{fibonacci(x)}");
+
 fo.close();
