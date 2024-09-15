@@ -2,16 +2,10 @@ fi = open("input.txt")
 
 fo = open("output.txt", "w");
 
-s = fi.read().split();
+a, b = map(int, fi.read().split());
 
-for i in range(0, len(s)):
-    s[i] = int(s[i]);
-
-sum = 0;
-
-for i in range(0, len(s)):
-    sum += s[i];
-    
-fo.write(f'{sum}');
-
+if (-10**9 <= a <= 10**9) and (-10**9 <= b <= 10**9):
+    fo.write(f'{a + b}');
+else:
+    fo.write(f'Неверное входное значение!');
 fo.close();

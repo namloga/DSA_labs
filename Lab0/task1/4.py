@@ -2,16 +2,12 @@ fi = open("input.txt")
 
 fo = open("output.txt", "w");
 
-s = fi.read().split();
+a, b = map(int, fi.read().split());
 
-for i in range (0, len(s)):
-    s[i] = int(s[i]);
-
-a = s[0]
-b = s[1];
-
-result = a + b * b;
-    
-fo.write(f'{result}');
-
+if (-10**9 <= a <= 10**9) and (-10**9 <= b <= 10**9):
+    result = a + b * b;
+    fo.write(f'{result}');
+else:
+    fo.write(f'Неверное входное значение!');
 fo.close();
+    

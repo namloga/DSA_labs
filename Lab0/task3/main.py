@@ -4,7 +4,8 @@ fo = open("output.txt", "w");
 
 x = int(fi.read())
 
-def basicLoopFib(n):
+def loopFib(n):
+    if n < 0: return;
     if n == 0: return 0;
     if n == 1 or n == 2:
         return 1;
@@ -16,7 +17,7 @@ def basicLoopFib(n):
     return second;
 
 def solve(n):
-    return basicLoopFib(n) % 10;
+    return loopFib(n) % 10;
 
 fo.write(f"{solve(x)}")
 
