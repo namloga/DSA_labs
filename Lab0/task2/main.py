@@ -1,3 +1,4 @@
+
 fi = open("input.txt")
 
 fo = open("output.txt", "w");
