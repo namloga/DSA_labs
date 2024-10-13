@@ -35,7 +35,7 @@ else:
     for i in numbers:
         fo.write(f'{i} ')
     
-    print("Время 1 задания:", time.perf_counter() - t_start)
+    print("Время 5 задания:", time.perf_counter() - t_start)
     print('Объем используемой памяти:', tracemalloc.get_traced_memory()[1], 'bytes')
 
 fo.close()

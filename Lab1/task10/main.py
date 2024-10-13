@@ -65,17 +65,15 @@ def palindrome(s, n):
         else:
             if count_odd >= 1:
                 if j >= 3:
-                    if j == count_odd_max and count_palindrome_mid > 0:
-                        while j != 0:
-                            s_palindrome_left += i
-                            s_palindrome_right += i
-                            j -= 2
-                            if j == 1:
-                                s_palindrome_mid = i
-                                j -= 1
-                        count_palindrome_mid -= 1
-                else:
-                    continue
+                    x = j
+                    while x != 1:
+                        s_palindrome_left += i
+                        s_palindrome_right += i
+                        x -= 2
+                    if j == count_odd_max:
+                        if count_palindrome_mid > 0:
+                            s_palindrome_mid = i
+                            count_palindrome_mid -= 1
             else:
                 if count_1 == 1:
                     s_palindrome_mid = i
@@ -85,16 +83,16 @@ def palindrome(s, n):
                         count_palindrome_mid -= 1
     result = s_palindrome_left + s_palindrome_mid + s_palindrome_right[::-1]       
     return result
-arr_string = [i for i in s]
 
+arr_string = [i for i in s]
 flag = True
+
+
 for i in s:
     if not (i.isalpha() and i.upper() == i):
         flag = False
         break
-
-
-if (n < 1 and n > 100000) or not flag:
+if (n < 1 or n > 100000) or not flag:
     print("Неверные входные данные")
 else:
     fo.write(f'{palindrome(arr_string, len(arr_string))}')

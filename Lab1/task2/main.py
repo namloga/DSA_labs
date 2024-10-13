@@ -46,8 +46,7 @@ if flag:
         fo.write(f'{i} ')
     print("Время 2 задания:", time.perf_counter() - t_start)
     print('Объем используемой памяти:', tracemalloc.get_traced_memory()[1], 'bytes')
-    fo.close()
 else:
     print("Неверные входные данные")
 
-    
+fo.close()

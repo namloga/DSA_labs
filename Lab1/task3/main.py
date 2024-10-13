@@ -50,4 +50,5 @@ else:
     
     print("Время 3 задания:", time.perf_counter() - t_start)
     print('Объем используемой памяти:', tracemalloc.get_traced_memory()[1], 'bytes')
-    fo.close()
+
+fo.close()

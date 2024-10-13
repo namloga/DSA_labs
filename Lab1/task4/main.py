@@ -47,6 +47,7 @@ else:
                     fo.write(f'{listOfIndex[i]},')
         else:
             fo.write(f"{result[0]}")
+    
     else:
         print("Неверные входные данные")
         
